@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background-color: #f8fafc;
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+}
+
+.filter-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgba(248, 250, 252, 0.98);
+    backdrop-filter: blur(12px);
+}
+
+.filter-card {
+    background: white;
+    box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 800;
+    color: #64748b;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1e293b;
+    outline: none;
+    appearance: none;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+    background-color: #fff;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #64748b;
+    font-weight: 600;
+    font-size: 13px;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+}
+
+.table-wrapper {
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: #1e293b;
+    color: white;
+    padding: 12px;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+tbody td {
+    padding: 12px;
+    font-size: 13px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.pj-id {
+    font-size: 10px;
+    font-weight: 700;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.pj-name {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-status {
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.badge-status.baik { background: #dcfce7; color: #15803d; }
+.badge-status.rusak-ringan { background: #fef9c3; color: #a16207; }
+.badge-status.rusak-berat { background: #fee2e2; color: #b91c1c; }
+
+/* KHUSUS MOBILE ANDROID */
+@media (max-width: 768px) {
+    .mobile-header { padding: 10px 0 !important; }
+    
+    .table-wrapper { background: transparent; border: none; }
+
+    table.mobile-optimized thead { display: none; }
+
+    table.mobile-optimized tbody tr {
+        display: block;
+        background: white;
+        margin-bottom: 10px;
+        padding: 12px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        position: relative;
+    }
+
+    table.mobile-optimized tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0 !important;
+        border: none;
+        text-align: right !important;
+    }
+
+    table.mobile-optimized tbody td::before {
+        content: attr(data-label);
+        font-weight: 800;
+        font-size: 10px;
+        color: #94a3b8;
+        text-transform: uppercase;
+    }
+
+    .cell-nama {
+        font-size: 15px !important;
+        color: #0f172a !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+        margin-bottom: 5px;
+        padding-bottom: 8px !important;
+    }
+
+    .pj-label {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+    }
+}

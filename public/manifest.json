@@ -1,0 +1,16 @@
+{
+    "name": "Inventaris UGK Mobile",
+    "short_name": "Inventaris",
+    "start_url": "/?standalone=true",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb",
+    "icons": [
+        {
+            "src": "https://cdn-icons-png.flaticon.com/512/2897/2897822.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
